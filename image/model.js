@@ -1,18 +1,9 @@
 const Sequelize = require('sequelize')
 const db = require('../db.js')
 
-const Image = db.define(
-  'image',
-  {
-    url: {
-      type: Sequelize.STRING,
-      field: 'image_url'
-    },
-    title: {
-      type: Sequelize.STRING,
-      field: 'image_title'
-    },
-  }
-)
+const Image = db.define('image', {
+    url: Sequelize.STRING,
+    title: Sequelize.STRING
+})
 
 module.exports = Image
